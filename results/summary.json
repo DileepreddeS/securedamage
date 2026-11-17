@@ -1,0 +1,241 @@
+{
+  "machine": "x86_64, 2 CPU threads, Python 3.12.13, OpenFHE 1.6.1.0",
+  "baseline": {
+    "relu_accuracy": 0.855,
+    "poly_accuracy": 0.8425,
+    "relu_latency_s": 0.00026998750007578565,
+    "poly_latency_s": 0.00027495750003936337,
+    "image_bytes": 3072,
+    "n_test": 1200
+  },
+  "param_sets": {
+    "A": {
+      "label": "128-bit, scale 2^40",
+      "N": 16384,
+      "log2_Q": 279.0874727403618,
+      "slots": 8192,
+      "depth": 5,
+      "scale_bits": 40,
+      "security": "128",
+      "he_std_max_log2_QP": 438,
+      "half_ring_dimension": "rejected: The specified ring dimension (8192) does not comply with HE standards recommendation (16384).",
+      "client_setup_s": {
+        "context": 0.02436023200004911,
+        "keygen": 0.008290113000043675,
+        "evalkeygen": 0.35091534399998636
+      },
+      "bundle_export_s": 0.30522854299999835,
+      "server_setup_s": 0.14284837500008507,
+      "first_query_s": 0.6361077570001044,
+      "bundle_bytes": {
+        "context": 837,
+        "public_key": 1836427,
+        "relin_key": 9441335,
+        "rotation_keys": 169917875
+      },
+      "n_images": 1200,
+      "argmax_agreement": 1.0,
+      "he_accuracy": 0.8425,
+      "plain_accuracy_same_images": 0.8425,
+      "max_abs_err": {
+        "mean": 8.478306811336162e-08,
+        "std": 7.589853588310941e-08,
+        "min": 5.629560817510537e-09,
+        "max": 5.744869042700884e-07,
+        "median": 5.880302622607303e-08
+      },
+      "max_rel_err": {
+        "mean": 3.419449993127745e-09,
+        "std": 3.1341814730836224e-09,
+        "min": 2.423494134467308e-10,
+        "max": 4.1939353923578957e-08,
+        "median": 2.533512624316992e-09
+      },
+      "min_margin": 0.007568500451919924,
+      "encrypt_s": {
+        "mean": 0.10355314250750013,
+        "std": 0.012407036957628716,
+        "min": 0.08642216500004452,
+        "max": 0.17416609099996094,
+        "median": 0.10519839900007355
+      },
+      "server_s": {
+        "mean": 0.4843096760241671,
+        "std": 0.039827397442012615,
+        "min": 0.4021626670000842,
+        "max": 0.6469505850000132,
+        "median": 0.48802296249994015
+      },
+      "decrypt_s": {
+        "mean": 0.01145507826583478,
+        "std": 0.0015973090204269976,
+        "min": 0.00938876700001856,
+        "max": 0.03623596399984308,
+        "median": 0.011444244000017534
+      },
+      "stages_s": {
+        "deserialize": 0.06019292224666477,
+        "conv": 0.09991550444750184,
+        "act1": 0.016663966409162092,
+        "fc1": 0.26054064390000115,
+        "act2": 0.010487186800836715,
+        "fc2": 0.03563443775999985,
+        "serialize": 0.00046594408749816316
+      },
+      "upload_bytes": 18364710,
+      "download_bytes": 525741
+    },
+    "B": {
+      "label": "128-bit, scale 2^50",
+      "N": 32768,
+      "log2_Q": 329.58496434922523,
+      "slots": 8192,
+      "depth": 5,
+      "scale_bits": 50,
+      "security": "128",
+      "he_std_max_log2_QP": 881,
+      "half_ring_dimension": "rejected: The specified ring dimension (16384) does not comply with HE standards recommendation (32768).",
+      "client_setup_s": {
+        "context": 0.04953621100003147,
+        "keygen": 0.013130799999998999,
+        "evalkeygen": 0.4813614749998578
+      },
+      "bundle_export_s": 0.3598630280000634,
+      "server_setup_s": 0.3029792700001508,
+      "first_query_s": 1.5296853639999881,
+      "bundle_bytes": {
+        "context": 845,
+        "public_key": 3671443,
+        "relin_key": 15732419,
+        "rotation_keys": 283156299
+      },
+      "n_images": 300,
+      "argmax_agreement": 1.0,
+      "he_accuracy": 0.82,
+      "plain_accuracy_same_images": 0.82,
+      "max_abs_err": {
+        "mean": 1.2395019413635743e-10,
+        "std": 1.1322308925820928e-10,
+        "min": 8.58335624798201e-12,
+        "max": 7.344311825363548e-10,
+        "median": 8.241940463449282e-11
+      },
+      "max_rel_err": {
+        "mean": 4.5854355980091384e-12,
+        "std": 3.871965144594712e-12,
+        "min": 3.445639919938595e-13,
+        "max": 2.4724652983398082e-11,
+        "median": 3.4949339089737276e-12
+      },
+      "min_margin": 0.007568500451919924,
+      "encrypt_s": {
+        "mean": 0.2028422888633357,
+        "std": 0.02263649368303222,
+        "min": 0.1677025459998731,
+        "max": 0.30431039699988105,
+        "median": 0.20583198700001049
+      },
+      "server_s": {
+        "mean": 1.0378570912833371,
+        "std": 0.07205016235418855,
+        "min": 0.8731584569998176,
+        "max": 1.264391291000038,
+        "median": 1.0514388435000228
+      },
+      "decrypt_s": {
+        "mean": 0.02600480048666365,
+        "std": 0.002884161433870032,
+        "min": 0.021271823000006407,
+        "max": 0.04282996999995703,
+        "median": 0.026257338999926105
+      },
+      "stages_s": {
+        "deserialize": 0.16563186734666638,
+        "conv": 0.2019110281133241,
+        "act1": 0.032172944803329905,
+        "fc1": 0.541997863993328,
+        "act2": 0.02029034157666653,
+        "fc2": 0.07474729165666834,
+        "serialize": 0.0006134222233299625
+      },
+      "upload_bytes": 36714870,
+      "download_bytes": 1050037
+    },
+    "C": {
+      "label": "192-bit, scale 2^40",
+      "N": 32768,
+      "log2_Q": 279.58498007158624,
+      "slots": 8192,
+      "depth": 5,
+      "scale_bits": 40,
+      "security": "192",
+      "he_std_max_log2_QP": 611,
+      "half_ring_dimension": "rejected: The specified ring dimension (16384) does not comply with HE standards recommendation (32768).",
+      "client_setup_s": {
+        "context": 0.04730498100002478,
+        "keygen": 0.015025324999896839,
+        "evalkeygen": 0.5859759310001209
+      },
+      "bundle_export_s": 0.36076062300003287,
+      "server_setup_s": 0.2627302260000306,
+      "first_query_s": 1.3005102130000523,
+      "bundle_bytes": {
+        "context": 837,
+        "public_key": 3671435,
+        "relin_key": 15732411,
+        "rotation_keys": 283156291
+      },
+      "n_images": 300,
+      "argmax_agreement": 1.0,
+      "he_accuracy": 0.82,
+      "plain_accuracy_same_images": 0.82,
+      "max_abs_err": {
+        "mean": 1.2890793902810746e-07,
+        "std": 1.1790619188990391e-07,
+        "min": 9.13656972301169e-09,
+        "max": 1.0629369313619463e-06,
+        "median": 8.783752214469587e-08
+      },
+      "max_rel_err": {
+        "mean": 4.797038383139316e-09,
+        "std": 3.6170960746616317e-09,
+        "min": 4.913079609005729e-10,
+        "max": 2.01420191311671e-08,
+        "median": 3.8763488679585285e-09
+      },
+      "min_margin": 0.007568500451919924,
+      "encrypt_s": {
+        "mean": 0.19956006498666815,
+        "std": 0.021038890506099295,
+        "min": 0.16448444499997095,
+        "max": 0.3031741699999202,
+        "median": 0.20503362549993653
+      },
+      "server_s": {
+        "mean": 1.0441991853533203,
+        "std": 0.0643006895409194,
+        "min": 0.8692161599999508,
+        "max": 1.2349717470001451,
+        "median": 1.0534465165000029
+      },
+      "decrypt_s": {
+        "mean": 0.026084367586675702,
+        "std": 0.002642893337752358,
+        "min": 0.021213532000274427,
+        "max": 0.03715208099993106,
+        "median": 0.02665499950001049
+      },
+      "stages_s": {
+        "deserialize": 0.1659206268900016,
+        "conv": 0.20387102939667937,
+        "act1": 0.03272345443666078,
+        "fc1": 0.5451783456133255,
+        "act2": 0.020294552340014132,
+        "fc2": 0.07511631670000497,
+        "serialize": 0.0006153246400034126
+      },
+      "upload_bytes": 36714790,
+      "download_bytes": 1050029
+    }
+  }
+}
